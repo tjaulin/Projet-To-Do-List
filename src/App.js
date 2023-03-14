@@ -53,7 +53,7 @@ function App() {
     <div>
       <Header />
       <Container monState={monState} setMonState={setMonState} tasks={tasks}/>
-      <div class="container tasks">
+      <div className="container tasks">
         {
           tasks.map((todo, index) => (
             <Card

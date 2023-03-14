@@ -29,6 +29,36 @@ export default function Container({monState, setMonState, tasks}) {
         setTxt("");
     }
 
+    if (tasks == null || tasks.length === 0) {
+        return (
+          <div className='container'>
+            <h2 className='title mt-5'>
+                Rentrez vos tâches à faire
+            </h2>
+
+            <form onSubmit={creationCarte}>
+                <div className="field">
+                    <div className="control">
+                        <label htmlFor="tache" className='label'>Tâche</label>
+                        <input className='input' type="text" id='tache' placeholder='Nom de la tâche . . .' onChange={e => setTache(e.target.value)} value={tache} />
+                    </div>
+                </div>
+
+                <div className="field">
+                    <div className="control">
+                        <label htmlFor="txt" className='label'>Description</label>
+                        <textarea className='textarea' type="text" id='txt' placeholder='Description de la tâche . . .' onChange={e => getTxt(e.target.value)} value={txt}></textarea>
+                    </div>
+                </div>
+
+                <div className="control">
+                    <button type='submit' className="button is-link has-background-primary">Créer une tâche</button>
+                </div>
+            </form>
+        </div>
+        );
+    }
+
     return (
         <div className='container'>
             <h2 className='title mt-5'>
@@ -54,7 +84,7 @@ export default function Container({monState, setMonState, tasks}) {
                     <button type='submit' className="button is-link has-background-primary">Créer une tâche</button>
                 </div>
             </form>
-            {tasks.length > 0 && <h2 className='title mt-5'>Mes tâches</h2>}
+            <h2 className='title mt-5'>Mes tâches</h2>
         </div>
     )
 }
