@@ -18,9 +18,9 @@ function App() {
   ]);
 
   // récupération du tableau depuis le localStorage
-  let tasks = localStorage.getItem("tasks");
-  tasks = JSON.parse(tasks);
+  let tasks = JSON.parse(localStorage.getItem("tasks"));
 
+  console.log(tasks);
   // vérification de la récupération du tableau
   console.log("tasks localStorage :");
   console.log(tasks);
@@ -31,6 +31,7 @@ function App() {
     const newValues = tabNettoyage.filter(item => tabNettoyage.indexOf(item) !== tabNettoyage.indexOf(tabNettoyage[index]));
     setMonState(newValues);
     // Récupérez les tâches du localStorage
+    console.log(localStorage.getItem("tasks"))
     let tasks = JSON.parse(localStorage.getItem("tasks"));
 
     // Supprimez la tâche sélectionnée en utilisant la méthode filter()

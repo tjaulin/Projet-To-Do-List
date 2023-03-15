@@ -20,7 +20,12 @@ export default function Container({monState, setMonState, tasks}) {
         const nvTab = [...monState, {tache: tache, txt: txt}]
         setMonState(nvTab);
 
-        let tasks = JSON.parse(localStorage.getItem("tasks"));
+        let tasks = localStorage.getItem("tasks");
+        if (tasks) {
+            tasks = JSON.parse(tasks);
+        } else {
+            tasks = [];
+        }
         tasks.push({tache: tache, txt: txt})
 
         localStorage.setItem("tasks", JSON.stringify(tasks));
