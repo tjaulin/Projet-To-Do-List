@@ -6,3 +6,9 @@
 .button:hover {
     background-color: rgb(1, 161, 137)!important;
 }
+
+.titleBtn {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+}
