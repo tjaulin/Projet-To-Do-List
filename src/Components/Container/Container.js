@@ -58,7 +58,7 @@ export default function Container({monState, setMonState, tasks}) {
                 </div>
 
                 <div className="control">
-                    <button type='submit' className="button is-link has-background-primary">Créer une tâche</button>
+                    <button type='submit' className="button is-responsive is-link has-background-primary">Créer une tâche</button>
                 </div>
             </form>
         </div>
@@ -87,12 +87,12 @@ export default function Container({monState, setMonState, tasks}) {
                 </div>
 
                 <div className="control">
-                    <button type='submit' className="button is-link has-background-primary">Créer une tâche</button>
+                    <button type='submit' className="button is-responsive is-link has-background-primary">Créer une tâche</button>
                 </div>
             </form>
             <div className='container titleBtn'>
                 <h2 className='title mt-5'>Mes tâches</h2>
-                <div className='button has-text-white' onClick={deleteAll}>Tout supprimer</div>
+                <div className='button rounded has-text-white is-responsive' onClick={deleteAll}>Tout supprimer</div>
             </div>
         </div>
     )

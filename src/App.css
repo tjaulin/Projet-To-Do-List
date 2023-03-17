@@ -4,6 +4,11 @@
   padding: 0;
 }
 
+::selection {
+  background-color: rgb(1, 161, 137);
+  color: white;
+}
+
 .container.tasks {
   margin-bottom: 7em;
 }

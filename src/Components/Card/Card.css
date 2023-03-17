@@ -3,3 +3,13 @@
     right: 15px;
     top: 10px;
 }
+
+.card-content {
+    gap: 20px;
+}
+
+.isChecked p, .isChecked h3 {
+    text-decoration: line-through;
+    color: rgb(105, 105, 105);
+    font-weight: 100;
+}

@@ -2,8 +2,11 @@
     position: fixed;
     bottom: 0;
     width: 100%;
-    padding: 2rem;
-    margin-top: 3rem;
+    padding: 1em;
+}
+
+.credit {
+    margin: 0!important;
 }
 
 .footer a {
